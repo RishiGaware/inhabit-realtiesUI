@@ -1,0 +1,341 @@
+.container {
+  position: absolute;
+  top: 6rem;
+  left: 16rem;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  height: calc(100vh - 6rem);
+  width: calc(100% - 16rem);
+  overflow-y: auto;
+}
+
+.sectionHeading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #00376e;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.dateInputWrapper {
+  position: relative;
+}
+
+.dateInput {
+  width: 100%;
+  padding-right: 30px;
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.radioGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.radioGroup label input {
+  margin-right: 4px;
+}
+
+.radioGroup input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #001b36;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all ease-in-out;
+  background-color: white;
+}
+
+.radioGroup input[type="radio"]:checked::before {
+  content: '✔';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 16px;
+  color: #127c96;
+  font-weight: bold;
+  text-align: center;
+  line-height: 18px;
+}
+
+.radioGroup input[type="radio"]:focus {
+  box-shadow: 0 0 0 3px rgba(18, 124, 150, 0.3);
+}
+
+.radioGroup input[type="radio"]:hover {
+  border-color: #127c96;
+}
+
+.radioGroup input[type="radio"]:checked {
+  border-color: #127c96;
+}
+
+.radioGroup input[type="radio"]:checked + label {
+  color: #127c96;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.errorInput {
+  border-color: red !important;
+}
+
+.selectDropdown {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.reactSelectWrapper {
+  width: 100%;
+  color: #001b36;
+}
+
+.reactSelect :global(.react-select__control) {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2px 5px;
+  font-size: 14px;
+  color: black;
+  min-height: 38px;
+}
+
+.reactSelect :global(.react-select__menu) {
+  color: #001b36;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.reactSelect :global(.react-select__option) {
+  color: #001b36;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.form {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  color: #001b36;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 15px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.row label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.row input,
+.row select,
+.row textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  color: black;
+}
+
+.row input[type="radio"] {
+  appearance: none;
+  color: #127c96;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #127c96;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all ease-in-out;
+  background-color: white;
+  background-image: none;
+}
+
+.row input[type="radio"]:checked {
+  background-color: #127c96;
+  border-color: #127c96;
+}
+
+.row input[type="radio"]:checked::before {
+  content: '\2713';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.row input[type="radio"]:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+.inlineRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.inlineRow .row {
+  width: 48%;
+  padding-right: 10px;
+}
+
+.inlineRow .row:last-child {
+  padding-right: 0;
+}
+
+.row input::placeholder,
+.row select::placeholder,
+.row textarea::placeholder {
+  color: #a9a9a9;
+  font-size: 10px;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background-color: #127c96;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #0f6a83;
+}
+
+.cancelBtn {
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #999;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancelBtn:hover {
+  background-color: #cccccc;
+}
+
+/* Password input and eye icon */
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.passwordWrapper input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: black;
+  font-size: 14px;
+  padding-right: 40px;
+}
+
+.passwordWrapper input:focus {
+  outline: none;
+  border-color: #127c96;
+  box-shadow: 0 0 0 1px #127c96;
+}
+
+.eyeIcon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #001b36;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}

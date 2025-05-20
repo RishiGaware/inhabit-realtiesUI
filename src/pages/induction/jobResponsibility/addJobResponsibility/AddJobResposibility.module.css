@@ -1,0 +1,413 @@
+/* Common Styles for both Add and Edit Job Description */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Container */
+.container {
+    position: absolute;
+    top: 6rem;
+    left: 16rem;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100vh - 6rem);
+    width: calc(100% - 16rem);
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+/* Section Heading */
+.sectionHeading {
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Input Styles */
+.row input,
+.row select,
+.row textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    color: black;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.row label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+/* Button Styles */
+.submitRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* Increased space between buttons */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 12px; /* Add space between buttons */
+    padding-top: 16px; /* Optional: space above buttons */
+  }
+
+.primaryBtn {
+    background-color: #127c96;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+    background-color: #0f6a83;
+}
+
+.cancelBtn {
+    background-color: #e0e0e0;
+    color: #333;
+    border: 1px solid #999;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancelBtn:hover {
+    background-color: #cccccc;
+}
+
+/* Required Field Indicator */
+.required {
+    color: red;
+    margin-left: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .form {
+        padding: 20px;
+    }
+    
+    .submitRow {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .submitRow button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+    
+    .form {
+        padding: 15px;
+    }
+}
+
+/* Other common styles */
+.labelWithPadding {
+    padding-left: 8px;   /* adjust as needed */
+    padding-top: 8px;    /* adjust as needed */
+    display: inline-block; /* ensures padding is applied correctly */
+  }
+
+.form {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    color: #001b36;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.required {
+    color: red;
+    margin-left: 4px;
+}
+
+/* React Select Custom Styles */
+.reactSelect {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Title Select specific styles */
+.reactSelect :global(.select__control) {
+  min-height: 38px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: white;
+}
+
+.reactSelect :global(.select__control:hover) {
+  border-color: #40a9ff;
+}
+
+.reactSelect :global(.select__control--is-focused) {
+  border-color: #40a9ff;
+  box-shadow: none;
+}
+
+/* Hide dropdown indicator for title Select */
+.reactSelect :global(.select__dropdown-indicator) {
+  display: none;
+}
+
+.reactSelect :global(.select__menu) {
+  z-index: 9999;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Select option styles */
+.reactSelect :global(.select__option) {
+  color: #000000 !important;
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: white !important;
+}
+
+.reactSelect :global(.select__option--is-focused) {
+  background-color: #e6f7ff !important;
+  color: #000000 !important;
+}
+
+.reactSelect :global(.select__option:hover) {
+  background-color: #e6f7ff !important;
+  color: #000000 !important;
+}
+
+/* Title Select value styles */
+.reactSelect :global(.select__single-value) {
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+.reactSelect :global(.select__control--is-focused .select__single-value) {
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+.reactSelect :global(.select__control:hover .select__single-value) {
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+/* Title Select input styles */
+.reactSelect :global(.select__input) {
+  color: #000000 !important;
+  margin: 0;
+  padding: 0;
+  font-weight: normal !important;
+}
+
+.reactSelect :global(.select__input:focus) {
+  outline: none;
+  box-shadow: none;
+}
+
+.reactSelect :global(.select__placeholder) {
+  color: #bfbfbf !important;
+}
+
+/* Title Select indicator styles */
+.reactSelect :global(.select__dropdown-indicator) {
+  color: #bfbfbf;
+}
+
+.reactSelect :global(.select__dropdown-indicator:hover) {
+  color: #40a9ff;
+}
+
+.reactSelect :global(.select__clear-indicator) {
+  color: #bfbfbf;
+}
+
+.reactSelect :global(.select__clear-indicator:hover) {
+  color: #40a9ff;
+}
+
+/* Title Select container styles */
+.reactSelect :global(.select__value-container) {
+  padding: 0;
+  color: #000000 !important;
+}
+
+.reactSelect :global(.select__value-container:focus) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Title Select menu styles */
+.reactSelect :global(.select__menu-list) {
+  padding: 0;
+}
+
+.reactSelect :global(.select__menu-list:focus) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Title Select input container styles */
+.reactSelect :global(.select__input-container) {
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+/* Title Select multi-value styles */
+.reactSelect :global(.select__multi-value) {
+  color: #000000 !important;
+  background-color: #e6f7ff !important;
+}
+
+.reactSelect :global(.select__multi-value__label) {
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+.reactSelect :global(.select__multi-value__remove) {
+  color: #bfbfbf !important;
+}
+
+.reactSelect :global(.select__multi-value__remove:hover) {
+  color: #40a9ff !important;
+}
+
+/* Title Select focused state styles */
+.reactSelect :global(.select__control--is-focused .select__single-value),
+.reactSelect :global(.select__control--is-focused .select__input),
+.reactSelect :global(.select__control--is-focused .select__value-container) {
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+/* Title Select selected option styles */
+.reactSelect :global(.select__option--is-selected) {
+  background-color: #e6f7ff !important;
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+/* Title Select menu list styles */
+.reactSelect :global(.select__menu-list .select__option) {
+  color: #000000 !important;
+  font-weight: normal !important;
+  background-color: white !important;
+}
+
+.reactSelect :global(.select__menu-list .select__option--is-focused),
+.reactSelect :global(.select__menu-list .select__option:hover) {
+  background-color: #e6f7ff !important;
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+/* Title Select menu list option styles */
+.reactSelect :global(.select__menu-list .select__option),
+.reactSelect :global(.select__menu-list .select__option--is-focused),
+.reactSelect :global(.select__menu-list .select__option:hover),
+.reactSelect :global(.select__menu-list .select__option--is-selected) {
+  color: #000000 !important;
+  font-weight: normal !important;
+  background-color: white !important;
+}
+
+.reactSelect :global(.select__menu-list .select__option--is-focused),
+.reactSelect :global(.select__menu-list .select__option:hover) {
+  background-color: #e6f7ff !important;
+}
+
+/* Title Select menu list option hover styles */
+.reactSelect :global(.select__menu-list .select__option:hover) {
+  background-color: #e6f7ff !important;
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+/* Title Select menu list option selected styles */
+.reactSelect :global(.select__menu-list .select__option--is-selected) {
+  background-color: #e6f7ff !important;
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+/* Title Select menu list option focused styles */
+.reactSelect :global(.select__menu-list .select__option--is-focused) {
+  background-color: #e6f7ff !important;
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+/* Additional styling for Title, Description, and Responsibilities fields */
+.titleDescriptionField {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.titleDescriptionField input,
+.titleDescriptionField textarea {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.titleDescriptionField label {
+    font-weight: 500;
+    color: black;
+}
+
+/* Responsibilities section specific styles */
+.responsibilitiesField {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.responsibilitiesField textarea {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    color: black;
+}

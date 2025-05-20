@@ -1,0 +1,221 @@
+/* JobResposibility.module.css */
+
+body,
+.container {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.container {
+  padding: 1rem;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.JobResposibility {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: black;
+  margin-left: 16rem;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 5rem);
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.panelHeader h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.controls input[type='text'] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.addUserBtn {
+  background-color: #127c96;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.jobTableContainer {
+  margin-top: 20px;
+  padding-bottom: 5%;
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+}
+
+.jobTableContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.jobTableContainer::-webkit-scrollbar-thumb {
+  background-color: #127c96;
+  border-radius: 4px;
+}
+
+.jobTableContainer::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.jobTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.jobTable th,
+.jobTable td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+  text-align: left;
+  box-sizing: border-box;
+  height: 70px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.editBtn,
+.deactivateBtn {
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.editBtn svg,
+.deactivateBtn svg {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.editBtn:hover svg,
+.deactivateBtn:hover svg {
+  transform: scale(1.2);
+}
+
+.editBtn:active svg,
+.deactivateBtn:active svg {
+  transform: scale(0.95);
+}
+
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2c3e50;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirmBtn, .cancelBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmBtn {
+  background-color: #f26d6d;
+  color: white;
+}
+
+.cancelBtn {
+  background-color: #1494b4;
+  color: white;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #127c96;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

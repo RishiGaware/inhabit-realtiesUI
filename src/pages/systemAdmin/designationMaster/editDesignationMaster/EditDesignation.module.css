@@ -1,0 +1,108 @@
+.container {
+    position: absolute;
+    top: 6rem;
+    left: 16rem;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100vh - 6rem);
+    width: calc(100% - 16rem);
+    overflow-y: auto;
+  }
+  
+  .sectionHeading {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00376e;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .form {
+      padding: 20px;
+      max-width: 95%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form {
+      padding: 15px;
+    }
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .row label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .row input,
+  .row select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    color: black;
+  }
+  
+  .row input::placeholder,
+  .row select::placeholder {
+    color: #a9a9a9;
+    font-size: 10px;
+  }
+  
+  .submitRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .submitRow button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .submitRow button[type="submit"] {
+    background-color: #127C96;
+    color: white;
+  }
+  
+  .submitRow button[type="submit"]:hover {
+    background-color: rgb(15, 120, 134);
+  }
+  
+  .submitRow button[type="button"] {
+    background-color: #adadad;
+    color: white;
+  }
+  
+  .submitRow button[type="button"]:hover {
+    background-color: hsl(0, 0%, 74%);
+  }

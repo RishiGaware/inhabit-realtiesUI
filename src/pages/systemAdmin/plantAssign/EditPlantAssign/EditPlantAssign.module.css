@@ -1,0 +1,180 @@
+/* Container styling */
+.container {
+  position: absolute;
+  top: 6rem;
+  left: 16rem;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  height: calc(100vh - 6rem);
+  width: calc(100% - 16rem);
+  overflow-y: auto;
+}
+
+.sectionHeading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #00376e;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.form {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.row label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.row input,
+.row select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  color: black;
+}
+
+/* Checkbox container styling */
+.checkboxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Checkbox label styling */
+.roundCheckbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+}
+
+/* Hide default checkbox */
+.roundCheckbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox */
+.customCheckmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px; /* Increased size */
+  width: 24px;  /* Increased size */
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* On checkbox checked */
+.roundCheckbox input:checked ~ .customCheckmark {
+  background-color: #127c96;
+  border-color: #127c96;
+}
+
+/* Add checkmark when checked */
+.customCheckmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show checkmark after checkbox is checked */
+.roundCheckbox input:checked ~ .customCheckmark::after {
+  display: block;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Submit row styling */
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submitRow button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submitRow button[type="submit"] {
+  background-color: #127c96;
+  color: white;
+}
+
+.submitRow button[type="button"] {
+  background-color: #ccc;
+  color: white;
+}
+
+.submitRow button:hover {
+  background-color: #0e6e7b;
+}
+
+/* Error text styling */
+.errorText {
+  margin-top: 5px;
+  color: red;
+  font-size: 0.75rem; /* Smaller font size for error */
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 15px;
+  }
+}

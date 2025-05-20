@@ -1,0 +1,19 @@
+/* src/styles/global.css */
+
+/* Example of global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  

@@ -1,0 +1,213 @@
+.container {
+    position: absolute;
+    top: 6rem;
+    left: 16rem;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align form to top */
+    padding: 20px 20px 40px 20px;
+    box-sizing: border-box;
+    height: calc(100vh - 6rem);
+    width: calc(100% - 16rem);
+    overflow-y: auto; /* Enable vertical scroll */
+  }
+
+  .sectionHeading {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00376e; /* Dark text color for visibility */
+    /* margin-top: 200px; */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    /* padding-bottom: 5px; */
+  }
+
+.dateInputWrapper {
+    position: relative;
+  }
+  
+  .dateInput {
+    width: 100%;
+    padding-right: 30px; /* Ensure space for the icon */
+  }
+  
+  .calendarIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888; /* Light gray color */
+    font-size: 18px;
+    pointer-events: none; /* Ensure the icon is not interactive */
+  }
+
+  .form {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* overflow-y: auto; */
+    /* max-height: calc(100vh - 120px); */
+  }
+
+
+  /* Primary Button - Submit, Save, etc. */
+.primaryBtn {
+  background-color: #127C96;  /* Primary color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #0F6A83;  /* Slightly darker teal on hover */
+}
+
+/* Cancel Button - Grey */
+.cancelBtn {
+  background-color: #E0E0E0;
+  color: #333;
+  border: 1px solid #999;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancelBtn:hover {
+  background-color: #CCCCCC;  /* Darker grey on hover */
+}
+
+@media (max-width: 768px) {
+    .form {
+        padding: 20px;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        padding: 15px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.row label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+.row input,
+.row select,
+.row textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    color: black;
+}
+
+/* Phone Input Customization */
+.row :global(.react-tel-input) {
+    width: 100% !important;
+}
+
+.row :global(.react-tel-input .form-control) {
+    width: 100% !important;
+    height: 38px !important;
+    padding: 10px 10px 10px 48px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    color: black !important;
+}
+
+.row :global(.react-tel-input .flag-dropdown) {
+    border: 1px solid #ccc !important;
+    border-radius: 8px 0 0 8px !important;
+    background-color: #f8f8f8 !important;
+}
+
+.row :global(.react-tel-input .selected-flag) {
+    border-radius: 8px 0 0 8px !important;
+    padding: 0 0 0 8px !important;
+}
+
+.row :global(.react-tel-input .selected-flag:hover),
+.row :global(.react-tel-input .selected-flag:focus) {
+    background-color: #f8f8f8 !important;
+}
+
+.row :global(.react-tel-input .country-list) {
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    margin-top: 4px !important;
+    max-height: 200px !important;
+    overflow-y: auto !important;
+}
+
+.row :global(.react-tel-input .country-list .country:hover) {
+    background-color: #f8f8f8 !important;
+}
+
+.row :global(.react-tel-input .country-list .country.highlight) {
+    background-color: #e6f7fa !important;
+}
+
+.row input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #0f6fff; /* Optional: custom checkbox color */
+    cursor: pointer;
+  }
+  
+  .inlineRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds padding between inline fields */
+  }
+  
+.row input::placeholder,
+.row select::placeholder,
+.row textarea::placeholder {
+    color: #a9a9a9; /* Light gray color */
+    font-size: 10px;
+}
+
+/* New style for fields like First Name, Last Name, etc. */
+.inlineRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inlineRow .row {
+    width: 48%; /* Adjusted width for inline fields */
+    padding-right: 10px;
+}
+
+.inlineRow .row:last-child {
+    padding-right: 0;
+}
+
+.submitRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}

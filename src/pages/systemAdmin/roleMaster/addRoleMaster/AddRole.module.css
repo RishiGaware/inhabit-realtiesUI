@@ -1,0 +1,121 @@
+.container {
+    position: absolute;
+    top: 6rem;
+    left: 16rem;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100vh - 6rem);
+    width: calc(100% - 16rem);
+    overflow-y: auto;
+  }
+  
+  .sectionHeading {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00376e;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .row label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .row input,
+  .row select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    color: black;
+  }
+  
+  .submitRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .submitRow button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .submitRow button[type="submit"] {
+    background-color: #127C96;
+    color: white;
+  }
+  
+  .submitRow button[type="button"] {
+    background-color: #ccc;
+    color: white;
+  }
+  
+  .submitRow button:hover {
+    background-color: #127C96;
+  }
+  
+  @media (max-width: 768px) {
+    .form {
+      padding: 20px;
+      max-width: 95%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form {
+      padding: 15px;
+    }
+  }
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #127C96;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+  }
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .required {
+    color: red;
+    margin-left: 4px;
+  }
+  

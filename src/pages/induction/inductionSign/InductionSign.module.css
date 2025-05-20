@@ -1,0 +1,184 @@
+.container {
+  position: absolute;
+  top: 6rem;
+  left: 16rem;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  height: calc(100vh - 6rem);
+  width: calc(100% - 16rem);
+  overflow-y: auto;
+}
+
+.sectionHeading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #00376e;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.form {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.infoSection {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.signOffSection {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.signOffSection h4 {
+  color: #00376e;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.row label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.row input[type="text"],
+.row input[type="checkbox"],
+.row textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  color: black;
+  background-color: white;
+}
+
+.row input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.row input[readOnly] {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.responsibilitiesBox {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submitRow button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submitRow button[type="submit"] {
+  background-color: #127C96;
+  color: white;
+}
+
+.submitRow button[type="button"] {
+  background-color: #ccc;
+  color: white;
+}
+
+.submitRow button:hover {
+  background-color: #005c6e;
+}
+
+.submitRow button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 15px;
+  }
+}
+
+.errorContainer {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.errorContainer h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.errorContainer p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.backButton {
+  background-color: #127C96;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.backButton:hover {
+  background-color: #0f6b82;
+} 

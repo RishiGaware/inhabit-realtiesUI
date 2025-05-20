@@ -1,0 +1,42 @@
+.chip {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  min-width: 100px;
+  text-align: center;
+}
+
+.completed {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.overdue {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+
+.inProgress {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #f57c00;
+  border-color: #f57c00;
+}
+
+.assigned {
+  background-color: rgba(33, 150, 243, 0.1);
+  color: #1976d2;
+  border-color: #1976d2;
+}
+
+.default {
+  background-color: rgba(158, 158, 158, 0.1);
+  color: #616161;
+  border-color: #616161;
+} 
