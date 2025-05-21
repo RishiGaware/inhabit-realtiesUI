@@ -1,27 +1,24 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Layout from './components/layout/Layout';
 import { JobResponsibilityProvider } from './context/induction/JobResponsibilityContext.jsx';
 import { toastConfig } from './utils/toastConfig';
+import { Suspense, lazy } from 'react';
+import PrivateRoute from './components/PrivateRoute';
+
 // Auth & Landing
 const Login = lazy(() => import('./pages/login/Login.jsx'));
 const Register = lazy(() => import('./pages/register/Register.jsx'));
 const Dashboard = lazy(() => import('./components/dashboard/Dashboard.jsx'));
 const ForgotPasswordReset = lazy(() => import('./pages/login/ForgotPasswordReset.jsx'));
+
 // System Admin
 
-// User Master
-const UserMaster = lazy(() => import('./pages/systemAdmin/userMaster/UserMaster.jsx'));
-const UserMasterAddUser = lazy(() => import('./pages/systemAdmin/userMaster/AddUser/AddUser.jsx'));
-const UserMasterEditUser = lazy(() => import('./pages/systemAdmin/userMaster/EditUser/EditUser.jsx'));
-
-// User Personal Details
-const UserProfile = lazy(() => import('./pages/systemAdmin/userPersonalDetails/UserPersonalDetails.jsx'));
-const UserProfileAddUser = lazy(() => import('./pages/systemAdmin/userPersonalDetails/AddUser/AddUser.jsx'));
-const UserProfileEditUser = lazy(() => import('./pages/systemAdmin/userPersonalDetails/EditUser/EditUser.jsx'));
 
 // Password Configuration
 const PasswordConfiguration = lazy(() => import('./pages/systemAdmin/passwordConfiguration/PasswordConfiguration.jsx'));
@@ -29,9 +26,32 @@ const PasswordConfiguration = lazy(() => import('./pages/systemAdmin/passwordCon
 // Change Password
 const ChangePassword = lazy(() => import('./pages/systemAdmin/changePassword/ChangePassword.jsx'));
 
-const App = () => {
+// // Admin Module
+// import AdminDashboard from './modules/admin/pages/Dashboard';
+// import AdminReports from './modules/admin/pages/Reports';
+// import UserManagement from './modules/admin/pages/UserManagement';
+
+// // Executive Module
+// import ExecutiveDashboard from './modules/executive/pages/Dashboard';
+// import LeadManagement from './modules/executive/pages/LeadManagement';
+// import CustomerManagement from './modules/executive/pages/CustomerManagement';
+// import SiteVisits from './modules/executive/pages/SiteVisits';
+
+// // Sales Module
+// import SalesDashboard from './modules/sales/pages/Dashboard';
+// import Bookings from './modules/sales/pages/Bookings';
+// import BookedUnits from './modules/sales/pages/BookedUnits';
+// import Payments from './modules/sales/pages/Payments';
+// import Handover from './modules/sales/pages/Handover';
+
+// // Client Module
+// import ClientDashboard from './modules/client/pages/Dashboard';
+// import ClientDocuments from './modules/client/pages/Documents';
+// import ClientPayments from './modules/client/pages/Payments';
+
+function App() {
   return (
-    <>
+    <Provider store={store}>
       <ToastContainer {...toastConfig} />
       <Suspense
         fallback={
@@ -46,18 +66,15 @@ const App = () => {
         }
       >
         <Routes>
-          {/* Public routes without layout */}
-          <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/password-reset" element={<ForgotPasswordReset />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/forgot-password" element={<ForgotPasswordReset />} />
-          {/* Protected routes with layout */}
         </Routes>
       </Suspense>
-    </>
+    </Provider>
   );
-};
+}
 
 export default App;
