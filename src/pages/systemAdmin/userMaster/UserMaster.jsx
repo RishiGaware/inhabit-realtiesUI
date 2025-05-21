@@ -9,7 +9,7 @@ import { UserContext } from '../../../context/UserContext';
 import { fetchUsersBasicInfo, deleteUser } from '../../../services/systemAdmin/UserMasterService';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Pagination from '../../../components/pagination/Pagination';
+import Pagination from '../../../components/common/pagination/Pagination';
 import Modal from '../../../components/common/Modal';
 
 const UserMaster = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, Outlet } from 'react-router-dom';
-import Navbar from '../navbar/Navbar';
-import Sidebar from '../Sidebar/Sidebar';
+import Navbar from '../common/Navbar/Navbar';
+import Sidebar from '../common/Sidebar/Sidebar';
 
 const Layout = () => {
   const [activeMainItem, setActiveMainItem] = useState('');

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Dashboard.module.css';
-import Sidebar from '../Sidebar/Sidebar';
-import Navbar from '../navbar/Navbar';
+import Sidebar from '../common/Sidebar/Sidebar';
+import Navbar from '../common/Navbar/Navbar';
 
 const Dashboard = () => {
   const [activeItem, setActiveItem] = useState('Dashboard');

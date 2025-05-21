@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { fetchAllUserPersonalDetails } from '../../../services/systemAdmin/UserPersonalDetailsService';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Pagination from '../../../components/pagination/Pagination';
+import Pagination from '../../../components/common/pagination/Pagination';
 
 const UserPersonalDetails = () => {
   const navigate = useNavigate();
